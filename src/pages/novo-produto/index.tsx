@@ -1,13 +1,13 @@
-
 import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   Alert,
 } from 'react-native';
+
 import { MaterialIcons } from '@expo/vector-icons';
+import { Input } from '../../components/input';
 import { styles } from './styles';
 
 export default function NovoProduto() {
@@ -27,14 +27,17 @@ export default function NovoProduto() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <MaterialIcons name="inventory" size={42} style={styles.headerIcon} />
-        <Text style={styles.title}>Novo Produto</Text>
+        <MaterialIcons
+          name="inventory"
+          size={42}
+          style={styles.headerIcon}
+        />
       </View>
 
       <View style={styles.form}>
         <View style={styles.inputContainer}>
           <MaterialIcons name="sell" size={24} style={styles.icon} />
-          <TextInput
+          <Input
             style={styles.input}
             placeholder="Nome do Produto"
             value={nome}
@@ -43,8 +46,12 @@ export default function NovoProduto() {
         </View>
 
         <View style={styles.inputContainer}>
-          <MaterialIcons name="attach-money" size={24} style={styles.icon} />
-          <TextInput
+          <MaterialIcons
+            name="attach-money"
+            size={24}
+            style={styles.icon}
+          />
+          <Input
             style={styles.input}
             placeholder="Preço de Venda"
             value={preco}
@@ -54,8 +61,12 @@ export default function NovoProduto() {
         </View>
 
         <View style={styles.inputContainer}>
-          <MaterialIcons name="inventory-2" size={24} style={styles.icon} />
-          <TextInput
+          <MaterialIcons
+            name="inventory-2"
+            size={24}
+            style={styles.icon}
+          />
+          <Input
             style={styles.input}
             placeholder="Quantidade de entrada"
             value={quantidade}
@@ -74,4 +85,3 @@ export default function NovoProduto() {
     </View>
   );
 }
-

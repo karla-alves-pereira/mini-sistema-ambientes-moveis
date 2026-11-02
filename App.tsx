@@ -1,16 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Login from './src/pages/novo-produto';
-import NovoProduto from './src/pages/novo-produto';
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/routes/index.routes';
 
 export default function App() {
   return (
-    
-    <NovoProduto/>
-
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  
-});
